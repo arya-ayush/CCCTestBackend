@@ -49,7 +49,7 @@ return [
         ],
 
         'mysql' => [
-            
+
             'driver'    => 'mysql',
             'host'      => $host,
             'database'  => $database,
