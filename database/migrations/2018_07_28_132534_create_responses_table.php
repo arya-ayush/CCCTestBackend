@@ -20,7 +20,7 @@ class CreateResponsesTable extends Migration
             $table->text('response');
             // add foreign key manually for student_id
 //            $table->foreign('student_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+//            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
             $table->timestamps();
         });
     }
