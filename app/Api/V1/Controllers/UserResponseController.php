@@ -8,6 +8,7 @@
 
 namespace App\Api\V1\Controllers;
 
+use App\Api\V1\Transformers\UserTransformer;
 use App\Question;
 use App\Response;
 use App\Api\V1\Requests\UserResponseRequest;
@@ -58,7 +59,11 @@ class UserResponseController extends Controller
             $this->score = $this->score - 1;
     }
 
-
+    public function index()
+    {
+        $user = User::all();
+        return $this->response->collection($user, new UserTransformer);
+    }
 
 
 }

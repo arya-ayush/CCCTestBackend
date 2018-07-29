@@ -20,5 +20,6 @@ $api->version('v1', function ($api) {
     $api->post('/question', 'App\Api\V1\Controllers\QuestionController@store');
     $api->post('/section', 'App\Api\V1\Controllers\SectionController@store');
     $api->post('/response', 'App\Api\V1\Controllers\UserResponseController@store');
+    $api->get('/user', 'App\Api\V1\Controllers\UserResponseController@index');
 
 });
