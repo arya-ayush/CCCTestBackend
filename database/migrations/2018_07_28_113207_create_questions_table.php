@@ -22,7 +22,7 @@ class CreateQuestionsTable extends Migration
             $table->text('opt3');
             $table->text('opt4');
             $table->text('answer');
-            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
+//            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->timestamps();
         });
     }
