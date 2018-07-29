@@ -19,5 +19,6 @@ $api->version('v1', function ($api) {
     $api->get('/question', 'App\Api\V1\Controllers\SectionController@index');
     $api->post('/question', 'App\Api\V1\Controllers\QuestionController@store');
     $api->post('/section', 'App\Api\V1\Controllers\SectionController@store');
+    $api->post('/response', 'App\Api\V1\Controllers\UserResponseController@store');
 
 });
