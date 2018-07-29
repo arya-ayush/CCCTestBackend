@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 $api = app('Dingo\Api\Routing\Router');
 
-$api->version('v1',['middleware' => 'cors'], function ($api) {
+$api->version('v1', function ($api) {
 
     $api->get('/question', 'App\Api\V1\Controllers\SectionController@index');
     $api->post('/question', 'App\Api\V1\Controllers\QuestionController@store');

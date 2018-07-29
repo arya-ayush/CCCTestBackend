@@ -13,6 +13,5 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
-        '/webpush','/webpush/*','api/*'
     ];
 }
