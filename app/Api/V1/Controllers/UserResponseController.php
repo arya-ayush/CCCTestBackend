@@ -61,7 +61,7 @@ class UserResponseController extends Controller
 
     public function index()
     {
-        $user = User::all();
+        $user = User::all()->sortBy('score');
         return $this->response->collection($user, new UserTransformer);
     }
 
