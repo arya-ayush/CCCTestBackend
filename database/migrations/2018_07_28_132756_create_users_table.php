@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->enum('branch',['cse','it']);
             $table->text('email');
             $table->text('mobile_no');
-            $table->unsignedInteger('score')->nullable()->default(0);
+            $table->integer('score')->nullable()->default(0);
             $table->timestamps();
         });
     }
