@@ -69,5 +69,18 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('api')
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
+
+
+        $api = app('Dingo\Api\Routing\Router');
+
+        $api->version('v1', function ($api) {
+
+            $api->get('/question', 'App\Api\V1\Controllers\SectionController@index')->middleware('cors');
+            $api->post('/question', 'App\Api\V1\Controllers\QuestionController@store')->middleware('cors');
+            $api->post('/section', 'App\Api\V1\Controllers\SectionController@store')->middleware('cors');
+            $api->post('/response', 'App\Api\V1\Controllers\UserResponseController@store')->middleware('cors');
+            $api->get('/users', 'App\Api\V1\Controllers\UserResponseController@index')->middleware('cors');
+
+        });
     }
 }
